@@ -46,7 +46,7 @@ function render(variables = {}) {
   if (variables.country !== null) country = `, ${variables.country}`;
 
   let position = "position-left";
-  if (variables.socialMediaPosition !== "left")
+  if (variables.socialMediaPosition !== "position-left")
     position = variables.socialMediaPosition;
 
   let twitter = "";
@@ -59,7 +59,7 @@ function render(variables = {}) {
 
   let linkedin = "";
   if (variables.linkedin !== null)
-    linkedin = `https://linkedin.com/${variables.linkedin}`;
+    linkedin = `https://linkedin.com/in/${variables.linkedin}`;
 
   let instagram = "";
   if (variables.instagram !== null)
