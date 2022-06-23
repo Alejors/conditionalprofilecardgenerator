@@ -43,27 +43,28 @@ function render(variables = {}) {
   if (variables.city !== null) city = variables.city;
 
   let country = ", Country";
-  if (variables.country !== null) country = ", " + variables.country;
+  if (variables.country !== null) country = `, ${variables.country}`;
 
   let position = "position-left";
-  if (variables.position !== "left")
-    position = "position-" + variables.position;
+  if (variables.socialMediaPosition !== "left")
+    position = variables.socialMediaPosition;
 
   let twitter = "";
   if (variables.twitter !== null)
-    twitter = "https://twitter.com/" + variables.twitter;
+    twitter = `https://twitter.com/${variables.twitter}`;
 
   let github = "";
   if (variables.github !== null)
-    github = "https://github.com/" + variables.github;
+    github = `https://github.com/${variables.github}`;
 
   let linkedin = "";
   if (variables.linkedin !== null)
-    linkedin = "https://linkedin.com/" + variables.linkedin;
+    linkedin = `https://linkedin.com/${variables.linkedin}`;
 
   let instagram = "";
   if (variables.instagram !== null)
-    instagram = "https://instagram.com/" + variables.instagram;
+    instagram = `https://instagram.com/${variables.instagram}`;
+
   // reset the website body with the new html output
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
             ${cover}
